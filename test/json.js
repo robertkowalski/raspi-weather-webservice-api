@@ -5,10 +5,10 @@ var assert = require('assert')
 var request = require('request')
 
 // settings
-var tempdir = __dirname + '/fixtures'
+var fixtures = __dirname + '/fixtures/'
 
 var env = process.env
-env.TEMPLOGPATH = tempdir
+env.FILE = fixtures + 'input.txt'
 
 // main module
 var server = require('../app.js')
@@ -21,7 +21,13 @@ before(function (done) {
 describe('api json serving', function () {
   it('serves json with a temperature', function (done) {
     request(url, function (er, res, body) {
-      assert.deepEquals(true, false)
+      assert.deepEqual(JSON.parse(body), {"t": 22750})
+      done()
+    })
+  })
+  it('sets the content type to application/json', function (done) {
+    request(url, function (er, res, body) {
+      assert.equal(res.headers['content-type'], 'application/json')
       done()
     })
   })

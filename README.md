@@ -7,5 +7,9 @@
 
 App Port (defaults to `1338`)
 ```
-env.PORT
+process.env.PORT
 ```
+
+##Response
+
+{"t": 22750}

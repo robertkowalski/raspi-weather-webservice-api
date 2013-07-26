@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "temperature-stream": "~1.1.1",
-    "glob": "~3.2.3"
+    "glob": "~3.2.3",
+    "readable-stream": "~1.0.2"
   },
   "devDependencies": {
     "mocha": "~1.12.0",
@@ -16,7 +17,8 @@
   },
   "bundleDependencies": [
     "temperature-stream",
-    "glob"
+    "glob",
+    "readable-stream"
   ],
   "repository": {
     "type": "git",
