@@ -1,6 +1,6 @@
 {
   "name": "raspi-weather-webservice-api",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "weather as a json service",
   "main": "app.js",
   "scripts": {
