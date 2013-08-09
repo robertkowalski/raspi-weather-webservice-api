@@ -7,6 +7,11 @@ var Transform = require('stream').Transform || require('readable-stream').Transf
 var env = process.env
 var port = env.PORT || 1338
 
+if (require.main == module)
+  serveApi()
+else
+  module.exports = serveApi
+
 module.exports = serveApi
 function serveApi (cb) {
   http.createServer(function (req, res) {
